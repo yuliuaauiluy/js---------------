@@ -10,13 +10,11 @@ body {
 .brands_h1,
 .swiper,
 .swiper-pagination {
-  width: 100%;   /* растягиваются под экран */
-  max-width: 1120px; /* можно ограничить на десктопе */
-  margin: 0 auto; /* центрирование */
+  width: 100%;  
+  max-width: 1120px; 
+  margin: 0 auto;
 }
-.swiper-slide {
-  flex: 0 0 auto;
-}
+
 .show-less {
   display: flex;
   cursor: pointer;
