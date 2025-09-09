@@ -1,288 +1,321 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
-  width: 320px;
-  height: 234px;
+  width: 100%;
+  min-height: 100vh;
 }
-
+.brands_h1,
+.swiper,
+.swiper-pagination {
+  width: 100%;   /* растягиваются под экран */
+  max-width: 1120px; /* можно ограничить на десктопе */
+  margin: 0 auto; /* центрирование */
+}
+.swiper-slide {
+  flex: 0 0 auto;
+}
 .show-less {
-display: flex;
-cursor: pointer;
-width: 88px;
-height: 24px;
-margin-left: 32px;
-border: none;
-background-color: #F8F8F8;
+  display: flex;
+  cursor: pointer;
+  width: 88px;
+  height: 24px;
+  margin-left: 32px;
+  border: none;
+  background-color: #F8F8F8;
 }
 .show-less_text {
-width: 57px;
-font-size: 16px; 
-font-family: 'TT Lakes Regular', sans-serif;
-font-weight: 500;
-letter-spacing: -0.2px;
-line-height: 24px;
-color: #1B1C21;
-align-items: center;
-justify-content: center;
-margin-left: 8px;
+  width: 57px;
+  font-size: 16px; 
+  font-family: 'TT Lakes Regular', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: #1B1C21;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
 }
 @font-face {
-    font-family: 'TT Lakes Regular';
-    src: url('fonts/TTLakes-Regular.eot');
-    src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-        url('fonts/TTLakes-Regular.woff') format('woff'),
-        url('fonts/TTLakes-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TT Lakes Regular';
+  src: url('fonts/TTLakes-Regular.eot');
+  src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/TTLakes-Regular.woff') format('woff'),
+       url('fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
     }
-header {
-    width: 320px;
-    height: 80px;
-    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
-    border-top: 1px solid #D9FFF5;
+.brands_h1 {
+  /*width: 320px;*/
+  min-height: 80px;
+  background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  border-top: 1px solid #D9FFF5;
   
 }
 h1 {
-    padding-left: 16px;
-    padding-top: 16px;
-    font-size: 16px; 
-    font-family: 'TT Lakes Regular', sans-serif;
-    width: 288px;
-    height: 48px;
-    font-weight: 400;
-    letter-spacing: -0.2px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #7E7E82;
+  padding-left: 16px;
+  padding-top: 16px;
+  font-size: 16px; 
+  font-family: 'TT Lakes Regular', sans-serif;
+  width: 288px;
+  height: 48px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #7E7E82;
 }
-
 .swiper {
   background-color: #F8F8F8;
-   width: 320px;
-   height: 154px;
-   overflow: visible;
- -webkit-mask-image: linear-gradient(to right, black 90%, transparent); 
- mask-image:linear-gradient(to right,black 90%, transparent); 
-
+  padding-bottom: 50px;
+  /*width: 320px;
+  height: 154px;*/
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent); 
+  mask-image:linear-gradient(to right,black 90%, transparent); 
 }
 .swiper-wrapper {
-  display: flex;
-  padding-left: 16px; /* отступ слева от первого слайда */
-  padding-right: 16px;
-  
+  padding: 16px;  
 }
 .swiper-slide {
-flex-shrink: 0; 
-width: 240px;
-height: 72px;
+  width: 70%; /* мобилка */
+  max-width: 240px;
+  /*width: 240px;
+  height: 72px;*/
+  border: 1px solid #EAEAEA;
+  background-color: #FFFFFF;
+  border-radius: 6px;
 }
-
-.swiper-slide_img {
-width: 240px;
-height: 72px;
+.swiper-slide--apple1 {
+  margin-right: 79px;
 }
-
+.swiper-slide_img--lenovo {
+  margin: 20px 16px;
+}
+.swiper-slide_img--samsung {
+  margin: 17px 16px;
+}
+.swiper-slide_img--viewsonic {
+  margin: 26px 14px;
+}
+.swiper-slide_img--hp {
+  margin: 10px;
+}
+.swiper-slide_img--acer {
+  margin: 24px 16px;
+}
+.swiper-slide_img--sony0 {
+  margin: 23px 14px;
+}
+.swiper-slide_img--bosch {
+  margin: 22px 16px;
+}
+.swiper-slide_img--sony {
+  margin: 23px 14px;
+}
+.swiper-slide_img--sony1 {
+  margin: 23px 14px;
+}
+.swiper-slide_img--apple1 {
+  margin: 12px 0px 16px 16px;
+}
+.swiper-slide {
+  position: relative;
+}
+.link {
+  width: 240px;
+  height: 72px;
+}
+.link::after {
+  display: block;
+  position: absolute; 
+  content:'';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2.5px solid #FF3E79;
+  left: 180px;
+  top: 14px;
+  bottom: 16px;
+}
+.link::before {
+  display: block;
+  position: absolute; 
+  content:'';
+  width: 7.5px;      
+  height: 12px;
+  background: url('img/dropdown.svg') no-repeat;
+  left: 200px;
+  top: 31px;
+}
 .swiper-pagination {
-margin: 0 auto;
-margin-bottom: 38px;
-
+  /*margin: 0 auto;*/
+  margin-bottom: 25px;
+  /*width: 320px;*/
 }
 .swiper-pagination-bullet {
-  width: 12px;        /* ширина точки */
-  height: 12px;       /* высота точки */
-  background: #DDDDDD; /* цвет неактивных */
-  opacity: 1;         /* убираем прозрачность по умолчанию */
-  margin: 0 6px !important; /* расстояние между точками */
-  border-radius: 50%; /* круглая форма */
+  width: 12px;        
+  height: 12px;       
+  background: #DDDDDD; 
+  opacity: 1;        
+  margin: 0 6px !important;
+  border-radius: 50%; 
 }
 .swiper-pagination-bullet-active {
   background: #B5B6BC;
 }
-
 .show-more, .show-less {
  display: none; 
 }
 .hidden {
   display: none;
 }
-.swiper {
-  overflow: hidden;
-}
+
 /*Планшет*/
 @media (min-width: 768px) and (max-width: 1119px){
-    .swiper-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    height: auto; /* 🔑 высота по контенту */
-  }
-  .swiper {
-    height: auto; /* 🔑 снимаем фиксированную высоту */
-  }
-
   body {
-  width: 768px;
-  height: 322px;
+  /*width: 768px;
+  height: 322px;*/
   background-color: #F8F8F8;
 }
-
-header {
-    width: 768px;
-    height: 56px;
-    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
-    border-top: 1px solid #D9FFF5;
+.brands_h1 {
+  /*width: 768px;*/
+  min-height: 56px;
+  background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  border-top: 1px solid #D9FFF5;
 }
 h1 {
-    padding-left: 24px;
-    padding-top: 16px;
-    width: 338px;
-    height: 24px;
-    
+  padding-left: 24px;
+  padding-top: 16px;
+  width: 338px;
+  height: 24px;
+  text-wrap: nowrap;
 }
-
 .swiper { 
-  width: 768px;
-  height: auto;
+  /*width: 768px;
+  height: auto;*/
+  padding-bottom: 0;
   overflow: hidden;
   -webkit-mask-image: none;
   mask-image: none;
 }
-.swiper-wrapper {
+ .swiper-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  height: auto; 
   padding: 24px;
-  flex-wrap: wrap;         /* карточки переносятся на следующую строку */
   gap: 16px 8px;
-}
+  }
 .swiper-slide {
-flex-shrink: 0; 
-width: 224px;
+  flex-shrink: 0; 
+  width: 224px;
 }
-
-.swiper-slide_img {
-width: 224px;
-height: 72px;
+.swiper-slide--apple1 {
+  margin-right: 0px;
 }
-
 .swiper-pagination {
-display: none;
+  display: none;
 }
-
+.link {
+  width: 224px;
+  height: 72px;
+}
+.link::after {
+  left: 165px;
+  top: 14px;
+  bottom: 16px;
+  right: 16px;
+}
+.link::before {
+  left: 185px;
+  top: 30px;
+}
 .show-more {
-display: flex;
-cursor: pointer;
-width: 134px;
-height: 24px;
-margin-left: 24px;
-border: none;
-background-color: #F8F8F8;
+  display: flex;
+  cursor: pointer;
+  width: 134px;
+  height: 24px;
+  margin-left: 24px;
+  border: none;
+  background-color: #F8F8F8;
 }
 .show-more_text {
-width: 101px;
-font-size: 16px; 
-font-family: 'TT Lakes Regular', sans-serif;
-font-weight: 500;
-letter-spacing: -0.2px;
-line-height: 24px;
-color: #1B1C21;
-align-items: center;
-justify-content: center;
-margin-left: 9px;
+  width: 101px;
+  font-size: 16px; 
+  font-family: 'TT Lakes Regular', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: #1B1C21;
+  margin-left: 9px;
 }
-.show-less {
- display: none; 
-}
-
 }
 
 /*ПК*/
 @media (min-width: 1120px) {
-    .swiper-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    height: auto; /* 🔑 высота по контенту */
-  }
-  .swiper {
-    height: auto; /* 🔑 снимаем фиксированную высоту */
-  }
-
-  body {
-  width: 1120px;
-  height: 322px;
+body {
+  /*width: 1120px;
+  height: 322px;*/
   background-color: #F8F8F8;
 }
-
-header {
-    width: 1120px;
-    height: 56px;
-    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
-    border-top: 1px solid #D9FFF5;
-  
+.brands_h1 {
+  /*width: 1120px;*/
+  min-height: 56px;
+  background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  border-top: 1px solid #D9FFF5;
 }
 h1 {
-    padding-left: 32px;
-    padding-top: 16px;
-    width: 338px;
-    height: 24px;
-    
+  padding-left: 32px;
+  padding-top: 16px;
+  width: 338px;
+  height: 24px;
+  text-wrap: nowrap;
 }
-
 .swiper { 
-  width: 1120px;
-  height: auto;
+  /*width: 1120px;
+  height: auto;*/
+  padding-bottom: 0;
   overflow: hidden;
   -webkit-mask-image: none;
   mask-image: none;
 }
 .swiper-wrapper {
   display: flex;
-  padding: 32px;
-  flex-wrap: wrap;         /* карточки переносятся на следующую строку */
+  padding: 24px 32px;
+  flex-wrap: wrap;   
   gap: 16px 16px;
-  
 }
 .swiper-slide {
-flex-shrink: 0; 
-width: 240px;
-height: 72px;
-margin-right: 32px;
+  flex-shrink: 0; 
+  width: 240px;
+  height: 72px;
+  }
+.swiper-slide--apple1 {
+  margin-right: 0px;
 }
-
-.swiper-slide_img {
-width: 240px;
-height: 72px;
-}
-
 .swiper-pagination {
-display: none;
+  display: none;
 }
-
 .show-more {
-display: flex;
-cursor: pointer;
-width: 133px;
-height: 24px;
-margin-left: 32px;
-border: none;
-background-color: #F8F8F8;
+  display: flex;
+  cursor: pointer;
+  width: 133px;
+  height: 24px;
+  margin-left: 32px;
+  border: none;
+  background-color: #F8F8F8;
 }
 .show-more_text {
-width: 101px;
-font-size: 16px; 
-font-family: 'TT Lakes Regular', sans-serif;
-font-weight: 500;
-letter-spacing: -0.2px;
-line-height: 24px;
-color: #1B1C21;
-align-items: center;
-justify-content: center;
-margin-left: 8px;
+  width: 101px;
+  font-size: 16px; 
+  font-family: 'TT Lakes Regular', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: #1B1C21;
+  margin-left: 8px;
 }
-.show-less {
- display: none; 
-}
-
 }
 

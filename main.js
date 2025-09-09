@@ -6,6 +6,7 @@ const swiper = new Swiper('.main-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,11 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     slides.forEach(card => card.classList.remove("hidden"));
     btnMore.style.display = "none";
     btnLess.style.display = "flex";
+    swiper.update();
   });
 
   // Кнопка "Скрыть"
   btnLess.addEventListener("click", () => {
     applyInitialState();
+    swiper.update();
   });
 
   // Первичная инициализация
